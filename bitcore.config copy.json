@@ -1,0 +1,78 @@
+{
+  "bitcoreNode": {
+    "modules": ["./bitcoin", "./bitcoin-cash", "./ethereum", "./ripple"],
+    "services": {
+      "api": {
+        "wallets": {
+          "allowCreationBeforeCompleteSync": true
+        }
+      }
+    },
+    "chains": {
+      "BTC": {
+        "regtest": {
+          "chainSource": "p2p",
+          "trustedPeers": [
+            {
+              "host": "",
+              "port": 8332
+            }
+          ],
+          "rpc": {
+            "host": "",
+            "port": 8333,
+            "username": "",
+            "password": ""
+          }
+        },
+           "testnet": {
+          "chainSource": "p2p",
+          "trustedPeers": [
+            {
+              "host": "",
+              "port": 18233
+            }
+          ],
+          "rpc": {
+            "host": "",
+            "port": 16532,
+            "username": "",
+            "password": ""
+          }
+        }
+      },
+      "VDS":{
+        "mainnet": {
+          "chainSource": "p2p",
+          "trustedPeers": [
+              {
+                "host": "",
+                "port": 6533
+              }
+            ],
+            "rpc": {
+              "host": "",
+              "port": 6532,
+              "username": "",
+              "password": ""
+            }
+          },
+        "testnet": {
+          "chainSource": "p2p",
+          "trustedPeers": [
+              {
+                "host": "",
+                "port": 18233
+              }
+            ],
+            "rpc": {
+              "host": "",
+              "port": 16532,
+              "username": "",
+              "password": ""
+            }
+          }
+      }
+    }
+  }
+}
